@@ -87,7 +87,7 @@ export const DataOperation = (props: Props) => {
     const a = document.createElement("a");
     a.href = url;
     const date = new Date();
-    a.download = `scobz-utilities-data-${format(date, "yyyy-MM-dd-HH-mm")}.json`;
+    a.download = `scombz-utilities-data-${format(date, "yyyy-MM-dd-HH-mm")}.json`;
     a.click();
     setTimeout(() => {
       URL.revokeObjectURL(url);
