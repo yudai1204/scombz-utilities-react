@@ -175,6 +175,20 @@ export const AdvancedOptions = (props: Props) => {
           value={saves.settings.hideMaterial}
           onChange={(_e, checked) => setSettings("hideMaterial", checked)}
         />
+        <CustomSwitch
+          i18nLabel="optionTitleDownloadFileBundle"
+          i18nCaption="optionDescriptionDownloadFileBundle"
+          optionId="downloadFileBundle"
+          value={saves.settings.downloadFileBundle}
+          onChange={(_e, checked) => setSettings("downloadFileBundle", checked)}
+        />
+        <CustomSwitch
+          i18nLabel="optionTitleLayoutLinkify"
+          i18nCaption="optionDescriptionLayoutLinkify"
+          optionId="layout.linkify"
+          value={saves.settings.layout.linkify}
+          onChange={(_e, checked) => setSettings("layout", { ...saves.settings.layout, linkify: checked })}
+        />
       </OptionGroup>
 
       <OptionGroup i18nTitle="課題提出ページ">
@@ -281,29 +295,6 @@ export const AdvancedOptions = (props: Props) => {
           optionId="lms.centering"
           value={saves.settings.lms.centering}
           onChange={(_e, checked) => setSettings("lms", { ...saves.settings.lms, centering: checked })}
-        />
-      </OptionGroup>
-      <OptionGroup i18nTitle="OptionGroupCoursePage">
-        <CustomSwitch
-          i18nLabel="optionTitleDownloadFileBundle"
-          i18nCaption="optionDescriptionDownloadFileBundle"
-          optionId="downloadFileBundle"
-          value={saves.settings.downloadFileBundle}
-          onChange={(_e, checked) => setSettings("downloadFileBundle", checked)}
-        />
-        <CustomSwitch
-          i18nLabel="optionTitleLayoutLinkify"
-          i18nCaption="optionDescriptionLayoutLinkify"
-          optionId="layout.linkify"
-          value={saves.settings.layout.linkify}
-          onChange={(_e, checked) => setSettings("layout", { ...saves.settings.layout, linkify: checked })}
-        />
-        <CustomSwitch
-          i18nLabel="optionTitleMarkdownNotePad"
-          i18nCaption="optionDescriptionMarkdownNotePad"
-          optionId="markdownNotePad"
-          value={saves.settings.markdownNotePad}
-          onChange={(_e, checked) => setSettings("markdownNotePad", checked)}
         />
       </OptionGroup>
 
